@@ -1,0 +1,110 @@
+\documentclass[a4paper, 11pt]{article}
+
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[left=2cm, top=3cm, text={17cm, 24cm}]{geometry}
+\usepackage{times}
+\usepackage[unicode]{hyperref}
+\hypersetup{colorlinks=true, hypertexnames=false}
+
+\begin{document}
+\begin{titlepage}
+    \begin{center}
+        \Huge \textsc{Vysoké učení technické v~Brně} \\
+        \huge \textsc{Fakulta informačních technologií} \\
+        \vspace{\stretch{0.382}}
+        \LARGE{Typografie a~publikování\,--\,4.~projekt} \\
+        \Huge{Bibliografické citace}
+        \vspace{\stretch{0.618}}
+    \end{center}
+
+    {\Large \today \hfill Michael Babušík}
+\end{titlepage}
+
+\section{\LaTeX}
+\subsection{Představení}
+\LaTeX{} je komplexní sadou značkovacích příkazů používanou s~programem \TeX{} pro přípravu různých dokumentů, od vědeckých článků po komplexní knihy. 
+Je to otevřený software, který je k~dispozici zdarma a~je udržován skupinou \LaTeX3 Project Group, ale také využívá rozšíření od stovek uživatelů a přispěvatelů. 
+Dokument v~\LaTeX{}u se skládá z~textových souborů s~obyčejným textem a~značkovacími příkazy, které mohou vkládat grafiku a~další prvky.
+\cite{Kopka_Daly2004}.
+
+\subsection{Proč \LaTeX}
+\LaTeX{} představuje systém pro sazbu dokumentů, který umožňuje logickou strukturu dokumentu namísto vizuálního designu, což je ideální pro složité dokumenty jako vědecké práce. 
+Na~rozdíl od programů WYSIWYG, \LaTeX{} odděluje formátování od obsahu, což umožňuje snadnou a~konzistentní úpravu dokumentu. 
+I~když moderní počítače umožňují okamžitou náhledovou sazbu v~programách WYSIWYG, \LaTeX{} nabízí větší flexibilitu a~konzistenci v~delších a~komplexních dokumentech.
+\cite{Lamport1994}.
+
+\subsection{Proč se to píše a vyslovuje tak divně?}
+\LaTeX{} se píše tak, jak je, aby zdůraznil své schopnosti v~porovnání s~běžnými textovými editory jako Word nebo OO Writer.
+Výslovnost termínu je~[latech], nikoli [tek] nebo~[teks], což odráží jeho původ a~spojení s~Lamportem, tvůrcem systému.
+Toto jazykové pravidlo je~důležité pro správné vyslovení názvu a ~odlišení od ~obyčejné gumové hmoty "latex".
+\cite{Martinek2010}.
+
+\subsection{Jak začít používat \LaTeX}
+\begin{enumerate}
+    \item Instalace: Pro práci s~\LaTeX{}em potřebujete nainstalovat například TexLive a~TeXMaker na~Windows.
+    \item První TeXový dokument: Vytvořte složku pro váš první \LaTeX{} dokument a~v~ní soubor ''prvni.tex''.
+    \item Příprava souboru: Všechny související soubory uložte do jedné složky a otevřete ''.tex'' soubor v~Texmakeru.
+\end{enumerate}
+\cite{Vyfuk2024}.
+Při tvorbě \texttt{.tex} dokumentu je doporučeno vytvořit samostatnou složku pro každý projekt, aby se~předešlo zmatečnosti kvůli množství souborů. 
+
+Pro základní strukturu dokumentu lze využít průvodce, který určuje třídu dokumentu, velikost písma a~formát papíru. 
+
+Dále je~vhodné zahrnout balíčky pro matematické vzorce, grafiku a~formátování textu. Hlavní obsah dokumentu je umístěn mezi příkazy \texttt{\textbackslash begin\{document\}} a~\texttt{\textbackslash end\{document\}}, 
+kde je možné psát text a~vkládat další prvky, jako jsou obrázky nebo tabulky.
+\cite{Simecek2013}.
+
+Text můžeme formátovat pomocí příkazů jako \texttt{\textbackslash textbf\{\}} pro tučné písmo a~\texttt{\textbackslash textit\{\}} pro kurzívu. 
+Velikost písma a~další vlastnosti textu lze nastavit pomocí různých formátovacích příkazů. 
+\LaTeX{} nabízí také možnost vytvářet nadpisy pomocí příkazů jako \texttt{\textbackslash chapter\{\}}, \texttt{\textbackslash section\{\}} a~\texttt{\textbackslash subsection\{\}}, které se automaticky číslují a~zarovnávají podle konvencí. 
+
+Dále jsou tu seznamy, ať~už číslované nebo nečíslované..., a~jejich formátování. Vnořené seznamy lze také vytvářet pomocí vhodných kombinací příkazů.
+\begin{enumerate}
+    \item \texttt{itemize}: nečíslovaný seznam
+    \item \texttt{enumerate}: číslovaný seznam
+    \item \texttt{description}: definiční seznam
+\end{enumerate}
+\cite{Lehocky2014}.
+
+\subsection{Struktura \LaTeX{}u}
+Struktura \LaTeX dokumentu se~skládá z~hlavičky, která definuje základní nastavení a~styl, a~textové části, kde se~nachází samotný obsah dokumentu. 
+Hlavička obsahuje příkazy pro nastavení stylu, velikosti písma a~dalších vlastností, zatímco textová část zahrnuje samotný text, formátování a~příkazy ovlivňující zobrazení textu.
+\cite{Benes1998}.
+
+\subsection{Stojí to za to?}
+Říká se, že \LaTeX umožňuje vytváření dokumentů s~vysokou kvalitou, avšak může být obtížnější se ho naučit. I~když to platí, lze tyto obavy zmírnit porozuměním základních principů a~vyhýbáním se některým neefektivním technikám. 
+Cílem tohoto článku \cite{Beeton2023} je představit začínajícím uživatelům správné postupy při používání \LaTeX{}u, abychom jim pomohli vyhnout se~častým chybám a~předešli frustraci.
+
+\subsection{Plovoucí objekty}
+V~\LaTeX{}u existují dvě základní třídy plovoucích objektů: obrázky (figure) a~tabulky (table). 
+Pořadí, v~němž jsou tyto objekty umístěny, je dáno jejich třídou; obrázky a~tabulky se nevkládají vždy v pořadí vyskytování v textu. 
+Každý plovoucí objekt lze umístit do jedné ze tří oblastí: horní (top), dolní (bottom) nebo plávající stránky (float pages/columns), a~pomocí specifikátorů lze ovlivnit, do~kterých oblastí se~objekt umístí.
+\cite{Mittelbach2014}.
+
+\subsection{Základní příkazy}
+Nejdůležitější je pochopit, jak se v~\LaTeX{}u nastavuje základní struktura dokumentu pomocí příkazů \textbackslash documentclass a~\textbackslash usepackage. 
+Příkaz \textbackslash documentclass určuje typ dokumentu a~nastavení, jako je~velikost písma a~formát papíru, zatímco \textbackslash usepackage 
+slouží k~načtení balíčků potřebných pro konkrétní funkce dokumentu, například pro české zápisy, grafiku nebo nastavení okrajů stránky.
+\cite{Bartik2017}.
+
+\subsection{Tvorba prezentací s Beamer}
+Při tvorbě prezentace v~\LaTeX{}u s~třídou Beamer se~snímky vytvářejí v~prostředí \textbackslash frame, 
+kde lze nastavit titulek pomocí příkazu \textbackslash frametitle a~obsah snímku. 
+Beamer automaticky generuje titulní snímek z~preambule dokumentu pomocí příkazu \textbackslash titlepage.
+\cite{Cerny2011}.
+
+\subsection{Grafy v \LaTeX{}u}
+\begin{itemize}
+    \item Package \texttt{picture} je~standardní součástí instalace \LaTeX{}u a~umožňuje vytvářet grafické objekty v~prostředí ohraničeném \textbackslash begin\{picture\}(hx,hy)(dx,dy)...\textbackslash end\{picture\}, kde \texttt{hx,hy} jsou koordináty horního pravého rohu a \texttt{dx,dy} jsou koordináty dolního levého rohu.
+    \item Toto prostředí je vhodné pro tvorbu linií, rámečků, šipek, kruhů, Bezierových křivek atd. 
+    \item \texttt{Tikzpicture} je~mocným prostředím pro vektorovou grafiku v~\LaTeX{}u a~umožňuje vytvářet složité grafy. Téměř 70 \% grafů v~ekonomické literatuře lze vytvořit pomocí příkazů \texttt{tikzpicture}.
+\end{itemize}
+\cite{SedaPavelVGIL}.
+
+
+\newpage
+\bibliographystyle{czechiso}
+\renewcommand{\refname}{Literatura}
+\bibliography{proj4}
+\end{document}
